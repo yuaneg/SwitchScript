@@ -3,7 +3,6 @@ permissions:
   contents: write
   actions: write
 on:
-  workflow_dispatch:   # 👈 手动触发
   push:
     branches:
       - release
