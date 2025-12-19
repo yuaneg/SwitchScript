@@ -19,7 +19,7 @@ mkdir -p ./SwitchSD/atmosphere/hosts
 mkdir -p ./SwitchSD/atmosphere/contents/420000000007E51Anx-ovlloader
 mkdir -p ./SwitchSD/atmosphere/contents/0000000000534C56ReverseNX-RT
 mkdir -p ./SwitchSD/atmosphere/contents/4200000000000010ldn_mitm
-mkdir -p ./SwitchSD/atmosphere/contents/0100000000000352emuiibo
+#mkdir -p ./SwitchSD/atmosphere/contents/0100000000000352emuiibo
 mkdir -p ./SwitchSD/atmosphere/contents/0100000000000F12Fizeau
 mkdir -p ./SwitchSD/atmosphere/contents/4200000000000000sys-tune
 mkdir -p ./SwitchSD/atmosphere/contents/420000000000000Bsys-patch
@@ -116,13 +116,13 @@ curl -sL "$download_url" -o DBI.nro && {
     mv DBI.nro ./switch/DBI
 } || echo "DBI download\033[31m failed\033[0m."
 
-latest_release_info=$(curl -sL https://api.github.com/repos/dragonflylee/Awoo-Installer/releases/latest)
-download_url=$(echo "$latest_release_info" | grep -oP '"browser_download_url": "\Khttps://[^"]*Awoo-Installer.zip' | sed 's/"//g')
-curl -sL "$download_url" -o Awoo-Installer.zip && {
-    echo "Awoo Installer download\033[32m success\033[0m."
-    unzip -oq Awoo-Installer.zip
-    rm Awoo-Installer.zip
-} || echo "Awoo Installer download\033[31m failed\033[0m."
+#latest_release_info=$(curl -sL https://api.github.com/repos/dragonflylee/Awoo-Installer/releases/latest)
+#download_url=$(echo "$latest_release_info" | grep -oP '"browser_download_url": "\Khttps://[^"]*Awoo-Installer.zip' | sed 's/"//g')
+#curl -sL "$download_url" -o Awoo-Installer.zip && {
+#    echo "Awoo Installer download\033[32m success\033[0m."
+#    unzip -oq Awoo-Installer.zip
+#    rm Awoo-Installer.zip
+#} || echo "Awoo Installer download\033[31m failed\033[0m."
 
 latest_release_info=$(curl -sL https://api.github.com/repos/WerWolv/Hekate-Toolbox/releases/latest)
 download_url=$(echo "$latest_release_info" | grep -oP '"browser_download_url": "\Khttps://[^"]*HekateToolbox.nro' | sed 's/"//g')
@@ -287,13 +287,13 @@ curl -sL "$download_url" -o ldn_mitm.zip&& {
     rm ldn_mitm.zip
 } || echo "ldn_mitm download\033[31m failed\033[0m."
 
-latest_release_info=$(curl -sL https://api.github.com/repos/zdm65477730/emuiibo/releases/latest)
-download_url=$(echo "$latest_release_info" | grep -oP '"browser_download_url": "\Khttps://[^"]*emuiibo.zip' | sed 's/"//g')
-curl -sL "$download_url" -o emuiibo.zip&& {
-    echo "emuiibo download\033[32m success\033[0m."
-    unzip -oq emuiibo.zip
-    rm emuiibo.zip
-} || echo "emuiibo download\033[31m failed\033[0m."
+#latest_release_info=$(curl -sL https://api.github.com/repos/zdm65477730/emuiibo/releases/latest)
+#download_url=$(echo "$latest_release_info" | grep -oP '"browser_download_url": "\Khttps://[^"]*emuiibo.zip' | sed 's/"//g')
+#curl -sL "$download_url" -o emuiibo.zip&& {
+#    echo "emuiibo download\033[32m success\033[0m."
+#    unzip -oq emuiibo.zip
+#    rm emuiibo.zip
+#} || echo "emuiibo download\033[31m failed\033[0m."
 
 latest_release_info=$(curl -sL https://api.github.com/repos/zdm65477730/QuickNTP/releases/latest)
 download_url=$(echo "$latest_release_info" | grep -oP '"browser_download_url": "\Khttps://[^"]*QuickNTP.zip' | sed 's/"//g')
@@ -373,7 +373,7 @@ TegraExplorer
 CommonProblemResolver
 Switch_90DNS_tester
 DBI
-Awoo-Installer
+#Awoo-Installer
 Hekate-Toolbox
 NX-Activity-Log
 NXThemesInstaller
@@ -394,7 +394,6 @@ ovl-sysmodules
 StatusMonitor
 ReverseNX-RT
 ldn_mitm
-emuiibo
 QuickNTP
 Fizeau
 Zing
