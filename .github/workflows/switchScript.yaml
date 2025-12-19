@@ -3,7 +3,7 @@ name: switchScript
 on:
   push:
     branches:
-      - main
+      - release
     paths:
       - 'README.md'
       - 'switchScript.sh'

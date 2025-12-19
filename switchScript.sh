@@ -67,15 +67,10 @@ curl -sL "$download_url" -o hekate.zip && {
     rm hekate.zip
 } || echo "Hekate + Nyx CHS download\033[31m failed\033[0m."
 
-### Fetch Sigpatches from https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/
-curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/plugins/sigpatches.zip -o sigpatches.zip
-if [ $? -ne 0 ]; then
-    echo "sigpatches download\033[31m failed\033[0m."
-else
-    echo "sigpatches download\033[32m success\033[0m."
-    unzip -oq sigpatches.zip
-    rm sigpatches.zip
-fi
+echo $PWD
+cp ../sigpatches.zip  ./
+unzip -oq sigpatches.zip
+rm -rf sigpatches.zip
 
 curl -sL https://raw.githubusercontent.com/huangqian8/SwitchPlugins/main/theme/logo.zip -o logo.zip
 if [ $? -ne 0 ]; then
